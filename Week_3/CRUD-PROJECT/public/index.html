@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Application</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>User Management</h1>
+        
+        <h2>Signup</h2>
+        <form id="signup-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            
+            <input type="button" value="Signup" onclick="signup()">
+            <div id="signup-message" class="message"></div>
+        </form>
+
+        <h2>Get Users</h2>
+        <input type="button" value="Get Users" onclick="getUsers()">
+        <div id="user-list" class="user-list"></div>
+
+        <h2>Update User</h2>
+        <form id="update-form">
+            <label for="update-id">Email:</label>
+            <input type="email" id="update-id" name="email" required>
+            
+            <label for="update-name">Name:</label>
+            <input type="text" id="update-name" name="name">
+            
+            <label for="update-password">Password:</label>
+            <input type="password" id="update-password" name="password">
+            
+            <input type="button" value="Update User" onclick="updateUser()">
+            <div id="update-message" class="message"></div>
+        </form>
+
+        <h2>Delete User</h2>
+        <form id="delete-form">
+            <label for="delete-id">Email:</label>
+            <input type="email" id="delete-id" name="email" required>
+            
+            <input type="button" value="Delete User" onclick="deleteUser()">
+            <div id="delete-message" class="message"></div>
+        </form>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
