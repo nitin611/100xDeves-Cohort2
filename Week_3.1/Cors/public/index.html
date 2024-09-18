@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sum Calculator</title>
+
+    <!-- Axios Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.6/axios.min.js"></script>
+
+    <!-- CSS Styling -->
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f9;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .container {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+        width: 400px;
+        text-align: center;
+      }
+
+      h1 {
+        color: #333;
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+
+      input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+        font-size: 16px;
+      }
+
+      button {
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        padding: 12px;
+        width: 100%;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+
+      button:hover {
+        background-color: #45a049;
+      }
+
+      .result {
+        margin-top: 20px;
+        font-size: 18px;
+        color: #333;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Sum Calculator</h1>
+
+      <!-- Input Fields -->
+      <input id="a" type="text" placeholder="First Value" />
+      <input id="b" type="text" placeholder="Second Value" />
+
+      <!-- Button -->
+      <button onclick="sendRequest()">Find Sum</button>
+
+      <!-- Result Display -->
+      <div id="result" class="result"></div>
+    </div>
+
+    <script>
+      async function sendRequest() {
+        // user se value lo-
+        const a = document.getElementById("a").value;
+        const b = document.getElementById("b").value;
+
+        try {
+          // Send a POST request to the server
+          const response = await axios.post("http://localhost:3001/sum", {
+            a: a,
+            b: b,
+          });
+
+          // display the result button ke niche---
+          document.getElementById("result").textContent = `Sum: ${response.data.sum}`;
+        } catch (error) {
+          // error handle karo
+          document.getElementById("result").textContent = "Error: Unable to calculate sum.";
+          console.error(error);
+        }
+      }
+    </script>
+  </body>
+</html>
