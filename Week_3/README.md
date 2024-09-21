@@ -1,9 +1,4 @@
 # Week 3 Progress - 100xDevs Cohort
-
-This repository contains my assignments, class code, and projects from **Week 3** of the **100xDevs Cohort**. I'm uploading my daily progress to GitHub to track my learning and growth as I work through various tasks related to full-stack development.
-
----
-
 ## Project and File Overview:
 
 ### 1. `assign_4.1.js`
@@ -56,6 +51,3 @@ This repository contains my assignments, class code, and projects from **Week 3*
 - **Status**: Completed
 - **Key Learnings**: Using Zod for input schema validation.
 
----
-
-## Folder Structure:

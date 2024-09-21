@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="input">
+            <input id="num1" type="text" placeholder="First number">
+            <br>
+            <br>
+            <input type="text" id="num2" placeholder="Second number">
+            <br>
+            <br>
+            <button onclick="sumdiv()">Calculate Sum</button>
+        </div>
+        <div id="finalSum">
+
+        </div>
+    </div>
+    <script >
+        function populateDiv(){
+            // when ever we use .value we get a string as a return value  -- 
+            let a=document.getElementById("num1").value;
+            let b=document.getElementById("num2").value;
+            // const element=document.getElementById("finalSum")
+            // here we have string so we have to convert it into Int for addition-
+            // element.innerHTML=parseInt(a)+parseInt(b);
+
+            // doing via fetch -- as we have backend of the application
+
+           
+
+        }
+
+        // i have done using a async await also can do using .then()---just 
+        async function sumdiv() {
+                const a=document.getElementById("num1").value;
+                const b=document.getElementById("num2").value;
+
+                const response=await fetch("https://sum-server.100xdevs.com/sum?a="+a+"&b="+b)
+                const ans=await response.text();
+                document.getElementById("finalSum").innerHTML=ans;
+                
+            }
+            
+    </script>
+</body>
+</html>
