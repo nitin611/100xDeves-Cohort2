@@ -1,42 +1,60 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* Center the content in the middle of the page */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Styling the container of the app */
+div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Button styling */
+button {
+  background-color: #4CAF50; /* Green background */
+  color: white; /* White text */
+  padding: 15px 30px; /* Add some padding */
+  border: none; /* Remove borders */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+  cursor: pointer; /* Mouse pointer on hover */
+  transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+/* Button hover effect */
+button:hover {
+  background-color: #45a049; /* Darker green when hovered */
+}
+
+/* Button click (active) effect */
+button:active {
+  transform: scale(0.95); /* Slightly shrink the button when clicked */
+}
+
+/* Adding a nice animation for the count */
+button {
+  animation: popIn 0.5s ease-in-out;
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    transform: scale(1);
+    opacity: 1;
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
