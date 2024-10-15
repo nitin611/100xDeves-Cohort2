@@ -4,6 +4,7 @@ export function CreateTodo() {
     const [description, setDescription] = useState("");
     const [toastMessage, setToastMessage] = useState("");
     const [toastType, setToastType] = useState("");
+
     const handleAddTodo = async () => {
         try {
             const response = await fetch("http://localhost:3000/todo", {
@@ -21,10 +22,12 @@ export function CreateTodo() {
                 showToast("Todo added successfully!", "success");
                 setTitle("");
                 setDescription("");
-            } else {
+            }
+             else {
                 showToast("Failed to add todo. Please try again.", "error");
             }
-        } catch (error) {
+        }
+         catch (error) {
             console.error("Error:", error);
             showToast("An error occurred. Please try again.", "error");
         }
@@ -46,13 +49,15 @@ export function CreateTodo() {
                 placeholder="Title"
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
-            /><br />
+            />
+            <br />
             <input
                 type="text"
                 placeholder="Description"
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
-            /><br />
+            />
+            <br />
             <button onClick={handleAddTodo}>Add a todo</button>
 
             {toastMessage && (

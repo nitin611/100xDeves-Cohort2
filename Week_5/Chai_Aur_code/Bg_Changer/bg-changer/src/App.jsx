@@ -1,7 +1,8 @@
 import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
 import './App.css';
+// --------------------------------When to use arrow function inside onClick handler---------------------------
+// Function reference (e.g., onClick={myFunction}): Use this when you don't need to pass any arguments or do extra logic inside the handler.
+// Arrow function (e.g., onClick={() => myFunction(arg)}): Use this when you need to pass arguments or write additional logic within the onClick handler.
 
 function App() {
   const [color, setColor] = useState("olive");

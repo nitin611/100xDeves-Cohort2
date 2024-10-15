@@ -17,15 +17,16 @@ function App() {
 }
 // making our own components and calling these components from the main app-
 function CounterButton(props){
-
-  function onClickHandler(){
+  const  onClickHandler=()=>{
     // re-rendering the setCount-
     props.setCount(props.count+1)
   }
+ 
   return <button onClick={onClickHandler}>
     Counter {props.count}
   </button>
 
 }
+
 
 export default App

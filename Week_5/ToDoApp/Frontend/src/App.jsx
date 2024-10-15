@@ -10,6 +10,7 @@ function App() {
     const [todos,setTodos]=useState([]);
 
 // ---------bad way to connect to backedn using cors as it give infinite request in network tab using this method-
+// hint - use React Hooks to prevent unncessary renders.
     // fetch("http://localhost:3000/todos")
     // .then(async function(res){
     //   const json=await res.json();
