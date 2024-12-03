@@ -6,7 +6,7 @@ function TodoItem({ todo }) {
     const [todoMessage,setTodoMessage]=useState(todo.todo);
     
     const {updateTodo,deleteTodo,toggleCompleted}=useTodo()
-
+ 
     // functionality-
     const editTodo=()=>{
         updateTodo(todo.id,{...todo,todo:todoMessage})

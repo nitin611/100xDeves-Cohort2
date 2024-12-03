@@ -11,9 +11,10 @@ function App() {
   return (
   <div>
     {/* here we have created 2 buttons , and try to navigate between, firstly we used window.location but in that
-    the whole html,cssand js is refetching and showing the result so we used useNavigate hook in react.
+    
+    the whole html,css and js is refetching and showing the result so we used useNavigate hook in react.
 
-    But useNavigate should be used inside BrowserRouter only not outside it like route can be used inside it only
+    But useNavigate should be used inside BrowserRouter only not outside it is like route can be used inside it only
     similarly. so we will define another component Appbar and will use it inside BrowserRoutwer. */}
     {/* <button onClick={()=>{
       navigate("/")

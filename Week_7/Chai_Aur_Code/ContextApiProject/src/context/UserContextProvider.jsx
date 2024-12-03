@@ -16,7 +16,4 @@ const UserContextProvider=({children})=>{
 
 }
 export default UserContextProvider
-
-
-
 // ye hai provider isko jsx banana parta hai taki sare pages ko isse wrap kar sake -
